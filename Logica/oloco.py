@@ -6,3 +6,11 @@ print(" funciona? \nrwarw")
 # relacionais: > < >= <= == !=
 # lógicos: and or not
 # atribuiçao: =
+
+'''
+    **
+    // or % or * 
+    
+    
+
+'''
