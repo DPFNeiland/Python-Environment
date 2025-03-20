@@ -7,22 +7,24 @@ SiList = list(Si)
 
 Lax = True
 
+aux = 0
+
 i = 0
 
+
 while Lax:
-
-    Lax = False
-
     if((i+Ki) <= len(Si)-1):
         if (Si[i] > Si[i+Ki]):
             SiList[i], SiList[i+Ki] = SiList[i+Ki], SiList[i]
-            Lax = True
-    
     
     i+=1
 
     if(Ki < i+2):
         i = 0
+        aux += 1
+    if(aux == 100):
+        Lax = False
+
 
 Si = ''.join(SiList)
 
