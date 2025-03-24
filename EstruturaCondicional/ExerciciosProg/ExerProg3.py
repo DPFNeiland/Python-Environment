@@ -12,3 +12,5 @@ elif b < a and b < c:
     print(f"{b} é o menor valor")
 elif c < a and c < b:
     print(f"{c} é o menor valor")
+    
+# print(f'{  'Olá' if(a == b) else "Fkanebg"}')
