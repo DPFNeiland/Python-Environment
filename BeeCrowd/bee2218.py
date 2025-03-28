@@ -1,26 +1,26 @@
 
 
-
-list = [0, 2]
-listada = [True, True]
-
 def retas(n):
-
-    if(n==1):
-        return list[1]
     
-    if listada[n]:
-        return list(n)
+    if(n%2 == 0):
+        return (n)*(n+1)/2 +1
     else:
-        listada[n] = True
-        list[n] = []
-        return retas(n-1) + n
+        return (n)*(n+1)/2+1
 
 T = int(input())
 
 
 
+for i in range(0,T):
 
+    N = int(input())
+
+    
+    print(f'{retas(N):.0f}')
+
+
+# list = [0, 2]
+# listada = [True, True]
 
 # def retas(n):
 
@@ -46,10 +46,3 @@ T = int(input())
 
 # lista = [0,2]
 # listada = [False]
-
-for i in range(0,T):
-
-    N = int(input())
-
-    
-    print(retas(N))
