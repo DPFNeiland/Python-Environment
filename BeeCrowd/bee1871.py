@@ -1,19 +1,18 @@
 
-def ZerotoNull(Resp):
-    resp = "".join([char if char in "0" else "" for char in Resp])
-
-    print(resp)
 
 Ni = 1
 Mi = 1
 
-while Ni != '0' and Mi != '0':
-    Ni, Mi = [str(x) for x in input().split()]
+while Ni != 0 and Mi != 0:
+    Ni, Mi = [int(x) for x in input().split()]
 
-    if Ni != '0' and Mi != '0':
+    if Ni != 0 and Mi != 0:
         
         Resp = str(int(Ni) + int(Mi))
 
-        Resp.replace('0','1')
+        for i in range(0,12):
+            Resp = Resp.replace("0","")
+            
         
-        ZerotoNull(Resp )
+        
+        print(f'{Resp}')        
