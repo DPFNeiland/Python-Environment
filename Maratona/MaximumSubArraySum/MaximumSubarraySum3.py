@@ -1,7 +1,9 @@
 
 
+lista = [312, 517, 7, -322, -153, 1302]
 
-lista = list(map(int,input().split()))
+
+# lista = list(map(int,input().split()))
 
 N = len(lista)
 
