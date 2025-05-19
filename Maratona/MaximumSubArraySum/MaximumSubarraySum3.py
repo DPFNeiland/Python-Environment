@@ -1,6 +1,6 @@
 
 
-lista = [312, 517, 7, -322, -153, 1302]
+lista = [1 ,-2, 5,-3, 4,-1, 6]
 
 
 # lista = list(map(int,input().split()))

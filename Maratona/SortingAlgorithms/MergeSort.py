@@ -23,7 +23,6 @@
 
 # So it runs in O(n long n).
 
-from math import inf
 
 lista = [10,9,8,5,3,7,92,185,78,1,0,65]
 
