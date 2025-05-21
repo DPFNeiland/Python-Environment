@@ -19,3 +19,6 @@ while contador < 5:
     
     
     
+    
+    
+print(f' {numero}', end=" ")
