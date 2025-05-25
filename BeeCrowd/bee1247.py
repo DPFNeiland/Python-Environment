@@ -7,15 +7,12 @@ while (True):
         VF = float(VF)
         VG = float(VG)
         
-        if(VF == VG):
-            resp = str('N')
-            print(resp)
-        elif((VG + D)*(VG - D)> 144 or (VG + D)*(VG - D) < 0):
-            resp = str('N')
-            print(resp)
+        disguard = (12 ** 2 + D ** 2) ** (1/2)
+        
+        if disguard / VG <= 12 / VF:
+            print('S')
         else:
-            resp = str('S')
-            print(resp)
+            print('N')
         
     except EOFError:
         break
