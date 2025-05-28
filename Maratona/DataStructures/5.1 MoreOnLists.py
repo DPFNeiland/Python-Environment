@@ -13,9 +13,8 @@ print(fruits.count('tangerine'))
 # Acha o item na lista mais próximo do indice zero
 print(fruits.index('banana'))
 
-# Acha o item na lista 'banana' mais próximo a partir do zero
+# Acha o item na lista 'banana' mais próximo a partir do quatro
 print(fruits.index('banana', 4))
-
 
 fruits.reverse()
 print(fruits)
