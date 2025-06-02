@@ -1,26 +1,30 @@
 
-
 placa = input()
 
-ehPlaca = 0
-
 if len(placa) == 8:
-    for i in range(0, len(placa)):
-        if (placa[i] >= 'A' and placa[i] <= 'Z' ) and (i == 0 or i == 1 or i == 2):
-            ehPlaca = 1
+    if (placa[0].isalpha() and
+        placa[1].isalpha() and
+        placa[2].isalpha() and
+        placa[3] == '-' and
+        placa[4].isdigit() and
+        placa[5].isdigit() and
+        placa[6].isdigit() and
+        placa[7].isdigit()):
+        print(1)
+    else:
+        print(0)
 
-        if (i == 4 and placa[i] == '-'):
-            ehPlaca = 1
-        
-        if (i == 5 or i == 6 or i == 7 or i == 8) and (placa[i] >= '0' and placa[i] <= '9'):
-            ehPlaca = 1
-            
-if len(placa) == 7:
-    for i in range(0, len(placa)):
-        if (placa[i] >= 'A' and placa[i] <= 'Z' ) and (i == 0 or i == 1 or i == 2 or i == 4):
-            ehPlaca = 2
-        
-        if (i == 3 or i == 5 or i == 6) and (placa[i] >= '0' and placa[i] <= '9'):
-            ehPlaca = 2   
+elif len(placa) == 7:
+    if (placa[0].isalpha() and
+        placa[1].isalpha() and
+        placa[2].isalpha() and
+        placa[3].isdigit() and
+        placa[4].isalpha() and
+        placa[5].isdigit() and
+        placa[6].isdigit()):
+        print(2)
+    else:
+        print(0)
 
-print(ehPlaca)
+else:
+    print(0)
