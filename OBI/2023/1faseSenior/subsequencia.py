@@ -7,10 +7,16 @@ A = int(A)
 B = int(B)
 
 
-sequencia = str(input())
-subsequencia = str(input())
+sequencia = list(map(int, input().split()))
+subsequencia = list(map(int, input().split()))
 
-print(sequencia)
-print(subsequencia)
-
-print(f"{"S" if subsequencia in sequencia else "N"}")
+aux = 0
+for num in sequencia:
+    if aux == len(subsequencia):
+        break
+    
+    
+    if subsequencia[aux] == num:
+        aux += 1
+        
+print(f"{"S" if aux == len(subsequencia) else "N"}")
