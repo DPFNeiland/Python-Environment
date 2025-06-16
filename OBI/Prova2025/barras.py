@@ -4,7 +4,7 @@ N = int(input())
 X = list(map(int,input().split()))
 
 H = X[0]
-for i in range(0, len(X) - 1):
+for i in range(0, len(X)):
     if H < X[i]:
         H = X[i]
 
