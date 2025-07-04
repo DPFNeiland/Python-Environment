@@ -1,37 +1,36 @@
 
 
+def Transformar_Char_Pra_Int(c: str):
+    return ord(c) - ord('0')
 
-# 4: últimos dois dígitos
-# 9: soma dos dígitos = múltiplos de 9
-# 25: útimos dois dígitos divisíveis por 25
+
+def Calcular_Resto(s: str, d: int):
+    base = 1%d
+    resto = 0
+    
+    for i in range(len(s) -1, -1, -1):
+        num = Transformar_Char_Pra_Int(s[i])
+        
+        resto = (resto + (num*base)%d)%d
+        
+        base = (base*10)%d
+        
+    return resto
 
 N = input()
 
-resp = ""
-ultimo = len(N) - 1
-
-# Divisível por 4
-
-if int(N[ultimo])%2%2 == 0 and int(N[ultimo])%2 == 0:
-    resp += "S\n"
+if Calcular_Resto(N, 4) == 0:
+    print("S")
 else:
-    resp += "N\n"
-
-# Divisível por 9
-sum = 0
-for carac in N:
-    sum += int(carac)
-
-if sum % 9 == 0:
-    resp += "S\n"
-else:
-    resp += "N\n"
+    print("N")
     
-# Divisível por 25
-
-if int(N[ultimo])%5%5 == 0 and int(N[ultimo])%5 == 0:
-    resp += "S"
+if Calcular_Resto(N, 9) == 0:
+    print("S")
 else:
-    resp += "N"
-
-print(resp)
+    print("N")
+    
+if Calcular_Resto(N, 25) == 0:
+    print("S")
+else:
+    print("N")
+    

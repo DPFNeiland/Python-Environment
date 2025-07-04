@@ -1,32 +1,32 @@
+def TransformarCharPraInt(c):
+    return ord(c) - ord('0')
 
+def CalcularResto(s: str, d: int) -> int:
+    base = 1 % d
+    res = 0
+    
+    for i in range(len(s) -1, -1, -1):
+        digito = TransformarCharPraInt(s[i])
+    
+        res = (res + (digito*base)%d)%d
+        
+        base = (base*10) % d
+    
+    return res
 
-def DividirPorX(X: int):
-    if  int(N[len(N) - 1]) == X:
-        return True
-    else:
-        return False
+N = input()
 
-
-N = str(input())
-resp = ""
-
-if int(N[len(N) - 1]) % 2 == 0:
-    resp += "S\n"
+if CalcularResto(N, 2) == 0:
+    print('S')
 else:
-    resp += "N\n"
+    print('N')
 
-sum = 0
-for str in N:
-    sum += int(str)
-
-if sum % 3 == 0:
-    resp += "S\n"
+if CalcularResto(N, 3) == 0:
+    print('S')
 else:
-    resp += "N\n"
+    print('N')
 
-if int(N[len(N) - 1]) % 5 == 0:
-    resp += "S"
+if CalcularResto(N, 5) == 0:
+    print('S')
 else:
-    resp += "N"
-
-print(resp)
+    print('N')
