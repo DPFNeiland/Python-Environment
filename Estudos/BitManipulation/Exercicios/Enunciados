@@ -1,0 +1,97 @@
+
+
+Bro, literalmente perguntei para o Chat do PT sobre ideias de exercícios
+para treinar manipulação de bits de nível fácil e médio para a maratona, aqui
+estão alguns:
+
+
+
+=== Fácil ===
+1. Bit Ligado
+    Dado um número inteiro N, determine se o 5º bit (contando a partir do bit 0, da direita para a esquerda) está ligado (é 1).
+    = Entrada:
+        Um único número inteiro N.
+    = Saída:
+        Imprima "SIM" se o 5º bit estiver ligado, ou "NAO" caso contrário.
+    = Exemplo:
+        Entrada:
+            50
+        Saída:
+            SIM
+
+
+2. Contar bits 1
+    Dado um número inteiro positivo N, imprima quantos bits 1 ele possui em sua representação binária.
+    = Entrada:
+        Um número inteiro N.
+    = Saída:
+        Um inteiro com a quantidade de bits 1.
+    = Exemplo:
+        Entrada:
+            13
+        Saída:
+            3
+
+
+
+=== Médio ===
+3. Subconjunto presente
+    Você recebe um número inteiro A, que representa um conjunto de elementos {0, 1, 2, ..., 31} em forma de máscara de bits. Agora, dado um outro número x, determine se x pertence ao conjunto representado por A.
+    = Entrada:
+        Dois inteiros A e x.
+    = Saída:
+        Imprima "SIM" se o elemento x estiver no conjunto representado por A, ou "NAO" caso contrário.
+    = Exemplo:
+        Entrada:
+            42 3
+        Saída:
+            SIM
+    (42 = 0b101010, então {1, 3, 5} estão no conjunto.)
+
+
+4. Interseção de conjuntos binários
+    Você receberá dois números inteiros A e B representando conjuntos em forma de máscara de bits. Calcule quantos elementos pertencem à interseção entre os dois conjuntos.
+    = Entrada:
+        Dois inteiros A e B.
+    = Saída:
+        Um inteiro com a quantidade de elementos que estão nos dois conjuntos ao mesmo tempo.
+    = Exemplo:
+        Entrada:
+            42 26
+        Saída:
+            2
+    (42 = 0b101010 → {1,3,5}, 26 = 0b011010 → {1,3,4} → Interseção: {1,3} → resposta = 2)
+
+
+5. Menor elemento no conjunto
+    Dado um número inteiro A representando um conjunto via máscara de bits, encontre o menor elemento presente no conjunto (ou seja, o menor índice de bit que está em 1).
+    = Entrada:
+        Um número inteiro A (garantido que A ≠ 0).
+    = Saída:
+        Um número inteiro indicando o menor elemento.
+    = Exemplo:
+        Entrada:
+            18
+        Saída:
+            1
+    (18 = 0b10010 → menor índice com bit 1 = 1)     
+
+
+6. Subconjunto Contido
+    Dado dois inteiros A e B representando conjuntos como máscaras de bits, determine se A está contido em B (ou seja, todos os elementos de A também estão em B).
+    = Entrada:
+        Dois inteiros A e B.
+    = Saída:
+        Imprima "SIM" se A ⊆ B, senão "NAO".
+    = Exemplo 1:
+        Entrada:
+            10 14
+        Saída:
+            SIM
+    (10 = 1010 → {1,3}; 14 = 1110 → {1,2,3}; A está contido em B)
+        Exemplo 2:
+            Entrada:
+                5 2
+            Saída:
+            NAO
+    (5 = 0101 → {0,2}; 2 = 0010 → {1}; A não está contido em B)
