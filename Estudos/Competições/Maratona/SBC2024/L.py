@@ -1,6 +1,6 @@
 
 
-cnt = [0 for _ in range(30)] 
+cnt = [0 for _ in range(31)] 
 N = int(input())
 a = list(map(int, input().split()))
 
@@ -13,8 +13,8 @@ for number in a:
     
     # Roda todos os bits do número pra contar
     while (1 << j) <= number:
-                    # Conta o 1 deslocado j vezes e faz um AND com number, se o resultado for
-                    # diferente de 0, ele incrementam em 1, senão, ele faz nada 
+            # Conta o 1 deslocado j vezes e faz um AND com number, se o resultado for
+            # diferente de 0, ele incrementa em 1, senão, ele faz nada 
         cnt[j] += 1 if ((1 << j) & number) else 0 
          
         j += 1
@@ -25,7 +25,7 @@ for i in range(N):
     
     prox = 0
     # roda todo o vetor cnt
-    for j in range(30):
+    for j in range(31):
         # Enquanto existir bit em j, ele executa
         if cnt[j] > 0:
             # faz um OR entre o prox e o bit 1 deslocado j vezes

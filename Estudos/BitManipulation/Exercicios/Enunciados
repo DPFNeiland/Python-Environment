@@ -95,3 +95,89 @@ estão alguns:
             Saída:
             NAO
     (5 = 0101 → {0,2}; 2 = 0010 → {1}; A não está contido em B)
+
+
+7. Bit Mais Significativo Ativo
+    Dado um número inteiro N > 0, retorne a posição do bit mais significativo ligado (o de maior ordem que está em 1). A posição vai de 0 a 31.
+    = Entrada:
+        Um número N.
+    = Saída:
+        Um único inteiro representando a posição do bit mais à esquerda que está em 1.
+    = Exemplo 1:
+        Entrada:
+            18
+        Saída:
+            4
+    (18 = 10010 → bit mais significativo em posição 4)
+    = Exemplo 2:
+        Entrada:
+            1
+        Saída:
+            0
+    (1 = 0001 → posição 0)
+
+
+
+=== Difícil ===
+8. Contar Subconjuntos de K elementos
+    Dado um número inteiro A representando um conjunto via máscara de bits, conte quantos subconjuntos de exatamente K elementos podem ser formados a partir de A.
+    = Entrada:
+        Dois inteiros A e K.
+    = Saída:
+        Um único inteiro com a quantidade de subconjuntos de tamanho K.
+    = Exemplo 1:
+        Entrada:
+            15 2
+        Saída:
+            6
+    15 = 1111 → 4 elementos → C(4,2) = 6 subconjuntos
+    = Exemplo 2:
+        Entrada:
+            9 3 
+        Saída:
+            0
+    9 = 1001 → {0,3} → só 2 elementos → não dá pra formar subconjuntos de 3
+
+
+9. Menor Superconjunto com K bits ativos
+    Dado um número N, encontre o menor número M ≥ N tal que M tem exatamente K bits ligados.
+    = Entrada:
+        Dois inteiros N e K.
+    = Saída:
+        O valor de M.
+    = Exemplo 1:
+        Entrada:
+            10 3
+        Saída:
+            11
+    10 = 1010 → precisa de 3 bits ligados → 11 = 1011 → ok
+    = Exemplo 2:
+        Entrada:
+            7 2
+        Saída:
+            11
+    7 = 0111 (3 bits) → precisa de 2 bits → menor M ≥ 7 com 2 bits ligados → 11 = 1011
+
+
+10. Operação Mínima para Zerar
+    Dado um número N, encontre o número mínimo de operações necessárias para zerá-lo, onde cada operação consiste em remover exatamente 1 bit ligado de N com a operação N = N & (N - 1) (algoritmo de Brian Kernighan).
+    = Entrada:
+        Um número inteiro N.
+    = Saída:
+        Um inteiro representando o número de operações.
+    = Exemplo 1:
+        Entrada:
+            13
+        Saída
+            3
+    13 = 1101 → 3 bits 1 → 3 operações
+    = Exemplo 2:
+        Entrada:
+            255
+        Saída:
+            8
+    255 = 11111111 → 8 operações
+
+
+Dito após toda essa lista, chat decepcionou nas difíceis, mas estou esperando demais
+baseado num prompt de três linhas
