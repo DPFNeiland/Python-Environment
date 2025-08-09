@@ -1,0 +1,17 @@
+
+
+def Func(n: int) -> None:
+
+    if n == 1:
+        return 1
+    print(f"{n:.0f}", end=" ")
+    if n%2 == 1:
+        n = 3*n + 1
+    elif n%2 == 0:
+        n = n / 2
+    
+    return Func(n)
+    
+n = 22
+
+print(Func(n))
