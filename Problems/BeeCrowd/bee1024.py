@@ -1,32 +1,30 @@
+def passadas():
+    N = int(input())
 
-
-N = int(input())
-
-
-for _ in range(N):
-    texto = input()
-    mensagem = ""
-    for c in texto:
-        if c.isalpha():
-            aux = chr(ord(c)+3)
-        else: 
-            aux = c
-        mensagem += (aux)
+    for _ in range(N):
+        texto = input()
         
-    invertido = ""
-    
-    
-    for i in range(len(mensagem) - 1,-1,-1):
-        invertido += mensagem[i]
+        mensagem = ""
+        for c in texto:
+            if c.isalpha():
+                mensagem += chr(ord(c) + 3)
+            else:
+                mensagem += c
+
+        mensagem = mensagem[::-1]
         
-    mensagem = invertido
-    aux = (len(mensagem))//2
-    
-    cesar = ""
-    for cchar in mensagem[0:aux]:
-        cesar += cchar
-    
-    for cchar in mensagem[aux:len(mensagem)+1]:
-        cesar += chr(ord(cchar)-1)
-        
-    print(cesar)
+        meio = len(mensagem) // 2
+        cesar = ""
+        for i in range(len(mensagem)):
+            if i < meio:
+                cesar += mensagem[i]
+            else:
+                cesar += chr(ord(mensagem[i]) - 1)
+
+        print(cesar)
+
+def main():
+    passadas()
+
+if __name__ == "__main__":
+    main()

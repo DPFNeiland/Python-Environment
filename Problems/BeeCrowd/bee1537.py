@@ -1,22 +1,23 @@
 
 
-N = 1
 
-MAX_N = 100000
-
-fatoriais = [1] * (MAX_N + 1)
-
-for i in range(2, MAX_N + 1):
-    fatoriais[i] = (fatoriais[i - 1] * i)
-
-
-while N != 0:
-    N = int(input())
     
-    if N == 0:
-        break
-    
-    if N == 3 :
-        print("1")
-    else:
-        print(f"{fatoriais[N]%1000000009:.0f}")
+
+
+def main():
+    fatorial = [1] * (10**5 + 1)
+    MOD = 1000000009
+
+    for i in range(4,100001):
+        fatorial[i-3] = (fatorial[i-4]*i ) % MOD 
+        
+    while True:
+        n = int(input())
+        
+        if n == 0:
+            break
+        
+        print(fatorial[n - 3])
+
+if __name__ == "__main__":
+    main()

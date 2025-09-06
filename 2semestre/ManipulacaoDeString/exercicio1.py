@@ -6,6 +6,7 @@ def cripografar(text: str, gap: int) -> str:
         if letter.isalpha():
             code = ord(letter)
             aux += chr((code - 97 + gap)%26 + 97)
+            # chr(ord(letter) + 3)
         else:
             aux += letter
             

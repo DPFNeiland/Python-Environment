@@ -1,16 +1,15 @@
-
-N = 1
-
-while N != 0:
+while True:
     N = int(input())
-      
-    matriz = [[
-        2 ** (x+i) for x in range(N)] 
-            for i in range(N)
-              ]
-    
-    for i in range(0, N):
-        for j in range(0, N):
-            print(f"{matriz[i][j]:9}", end="")
-        print()
-    print()
+    if N == 0:
+        break
+
+    max_value = 2 ** (2 * (N - 1))
+    width = len(str(max_value))
+
+    for i in range(N):
+        linha = []
+        for j in range(N):
+            valor = 2 ** (i + j)
+            linha.append(f"{valor:>{width}}")
+        print(" ".join(linha))
+    print()  
