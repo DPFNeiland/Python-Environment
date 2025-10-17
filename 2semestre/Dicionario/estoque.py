@@ -11,8 +11,17 @@ def Aplicar_Movimentacao(estoque: dict ,movimentacoes: list[list]) -> dict:
         
         else:
             estoque[produto]["saldo"] += quantidade
-            
-        
+    
+def Mostrar_Produtos_AbaixoEstoque(estoque: dict) -> dict:
+    
+    produtosAbaixoEstoque = {}
+    
+    for produto in estoque:
+        if estoque[produto].get('saldo') < estoque[produto].get("min"):
+            produtosAbaixoEstoque[produto] = estoque[produto]
+    
+    return produtosAbaixoEstoque
+                    
 def main():    
     
     estoque = {
@@ -30,7 +39,10 @@ def main():
     
     Aplicar_Movimentacao(estoque, movimentacao)
     
-    print(estoque)
+    # print(estoque)
+    
+    print(Mostrar_Produtos_AbaixoEstoque(estoque))
+    
     
     
 if __name__ == "__main__":
