@@ -20,6 +20,7 @@ def mochila(itens: List[Dict], capacidade: int) -> Tuple[int, List]:
             tabela[i][j] = max(anterior, item_com_valor)
     
     valor_maximo = tabela[n][capacidade]
+    
     escolhidos = []
     
     for i in range(n, 0, -1):
@@ -36,8 +37,8 @@ def main():
         {"nome": "notebook", "valor": 2000, "peso": 3},
         {"nome": "violão", "valor": 1500, "peso": 1}
     ]
-    
-    capacidade = 4
+        
+    capacidade = 5
     
     maximo, escolhidos = mochila(itens, capacidade)
     
