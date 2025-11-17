@@ -1,6 +1,6 @@
 import util
 from random import randint
 
-lista = [randint(0, 500) for _ in range(1000)]
+lista = [10, 5, 50, 14, 23, 2]
 
-print(util.BubbleSort(lista))
+print(util.InsertionSort(lista))

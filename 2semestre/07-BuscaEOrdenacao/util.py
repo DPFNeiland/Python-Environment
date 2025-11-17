@@ -22,3 +22,51 @@ def BubbleSort(lista: List[int]) -> List:
                 lista[j], lista[i] = lista[i], lista[j]
             
     return lista
+
+def SelectionSort(lista: List[int]) -> List :
+    n = len(lista)
+    
+    for i in range(n):
+        ind = i
+        for j in range(i + 1, n):
+            if lista[ind] > lista[j]:
+                ind = j
+        
+        lista[i], lista[ind] = lista[ind], lista[i]
+    
+    return lista
+
+
+def InsertionSort(lista: List[int]) -> List:
+    n = len(lista)
+
+    for i in range(1, n):
+        valor = lista[i]
+        j = i - 1
+        while j >= 0 and valor < lista[j]:
+            lista[j + 1] = lista[j]
+            j -= 1 
+        lista[j + 1] = valor
+        
+    return lista
+
+def quickSort(lista, inicio = 0, fim = None):
+    if fim is None:
+        fim = len(lista) - 1
+        
+    if inicio < fim:
+        pivo = particionar(lista, inicio, fim)
+        quickSort(lista, inicio, pivo - 1)
+        quickSort(lista, pivo + 1, fim)
+        
+def particionar(lista, inicio, fim) -> int:
+    pivo = lista[fim]
+    i = inicio - 1
+    
+    for j in range(inicio, fim):
+        if lista[j] <= pivo:
+            i += 1
+            lista[i], lista[j]= lista[j], lista[i]
+            
+    lista[i + 1], lista[fim] = lista[fim], lista[i + 1]
+    return i + 1
