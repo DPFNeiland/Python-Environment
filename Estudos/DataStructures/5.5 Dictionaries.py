@@ -32,3 +32,11 @@ print({x: x **2 for x in (2, 4, 6)})
 print(dict(sape=4139, guido=4127, jack=4098))
 
 # {'sape': 4139, 'guido': 4127, 'jack': 4098}
+
+
+
+tel = {0: 12, -1: 32, 32: 3}
+print(tel)
+
+tel.sort()
+print(tel)

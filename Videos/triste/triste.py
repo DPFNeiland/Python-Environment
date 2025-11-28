@@ -3,7 +3,6 @@ from datetime import datetime
 # Momento atual
 agora = datetime.now()
 
-prazo = datetime(2025, 11, 19, 20, 14, 0)
 
 # Diferença
 delta = prazo - agora
