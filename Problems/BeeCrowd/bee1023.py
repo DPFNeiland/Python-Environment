@@ -1,4 +1,3 @@
-from math import floor
 
 n = int(input())
 it = 1
@@ -17,18 +16,19 @@ while n != 0:
         totalConsumo += imoveis[i][1]
 
         # 1° é a média de consumo e o 2° é a qtd de pessoas na casa
-        mediaConsumoAtual = floor(imoveis[i][1]/imoveis[i][0])
+        mediaConsumoAtual = imoveis[i][1]//imoveis[i][0]
 
         if mediaConsumoAtual in jaTem:
             mediaConsumoDict[mediaConsumoAtual] += imoveis[i][0]
         else:
-            mediaConsumoDict[mediaConsumoAtual] = imoveis[i][1]
+            mediaConsumoDict[mediaConsumoAtual] = imoveis[i][0]
             jaTem.append(mediaConsumoAtual)
-    mediaConsumo = list(mediaConsumoDict.items()).sort()
+    
+    list(mediaConsumoDict.items()).sort()
 
     print(f"Cidade# {it}:")
-    for dados in mediaConsumo:
-        print(f"{dados[1]}-{dados[0]}",end=" ")
+    for pessoas, qtd in mediaConsumoDict.items():
+        print(f"{qtd}-{pessoas}",end=" ")
     print()
 
     print(f"Consumo medio: {int((totalConsumo/totalPessoas * (10 ** 2))) / (10 ** 2):.2f} m3.")

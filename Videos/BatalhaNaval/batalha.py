@@ -1,8 +1,19 @@
-import numpy as np
-import random
+import tkinter as tk
 
-# parâmetros do Q-Learning
-TAMANHO_TABULEIRO = 10
-TAXA_APRENDIZADO = 0.1 # alfa (alpha)
-FATOR_DESCONTO = 0.9 # gamma
-TAXA_EXPLORACAO = 1.0
+def button_click(texto):
+    print(f"Butal {texto} clicado")
+
+def main():
+    window = tk.Tk()
+    window.title("Batalha Naval")
+
+    button = tk.Button(window,
+                        text="Jogar PvP",
+                        command=button_click)
+    
+    button.pack()
+
+    window.mainloop()
+
+if __name__ == "__main__":
+    main()
