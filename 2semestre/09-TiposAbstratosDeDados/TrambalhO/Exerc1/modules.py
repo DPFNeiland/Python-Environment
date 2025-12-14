@@ -63,7 +63,6 @@ def quicksort(lista: List[Emprestimo], inicio = 0, fim = None):
         quicksort(lista, pivo + 1, fim)
 
 def particionar(lista: List[Emprestimo], inicio: int, fim: int) -> int:
-    # Randomicamente
     k = randint(inicio, fim)
     lista[k], lista[fim] = lista[fim], lista[k]
     
@@ -75,7 +74,7 @@ def particionar(lista: List[Emprestimo], inicio: int, fim: int) -> int:
             i += 1
             lista[i], lista[j] = lista[j], lista[i]
     
-    # coloca o pivô no local correto
+
     lista[i + 1], lista[fim] = lista[fim], lista[i + 1]
     return i + 1
 
@@ -86,7 +85,7 @@ def imprimir_emprestimo(Emprestimos: List[Emprestimo]) -> None:
 
     quicksort(Emprestimos)
 
-    print("[Ranking Total por Juros]")
+    print("[Ranking por Juros Total]")
     print("ID   - QtdParcelas | Valor Financiado(R$) | Valor de Cada Parcela (R$) | Juros Total (R$) | Custo Total (R$)")
 
     i = 0
