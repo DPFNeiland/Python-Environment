@@ -13,34 +13,28 @@
 # d) O programa não pode usar recursividade.
 
 
-
 def calcular_valor_mais_visto(vector: list[int]):
-    maxi = 1
     qtd = {}
-    val = set()
 
     for ele in vector:
         if ele in qtd:
             qtd[ele] += 1
             
-            if qtd[ele] == maxi:
-                val.append(ele)
-            
-            if qtd[ele] > maxi:
-                val = []
-                val.append(ele)
-                maxi += 1
-
         else:
             qtd[ele] = 1
+            
+    m_qtd = max(qtd.values())
+    
+    m_ele= [k for k, v in qtd.items() if v == m_qtd]
 
-    if len(val) == 1:
-        return f"R: {val[0]} -> Freq. Associada: {maxi}"
-
-    if len(val) == len(qtd):
-        return "Todos os valores apresentam a mesma frequência"
-
-    return "Existe mais de 1 valor com a mesma frequência"
+    if len(m_ele) == len(qtd):
+        return("Todos os valores apresentam a mesma frequência")
+    
+    elif len(m_ele) == 1:
+        valor_k = m_ele[0]
+        return(f"Elemento com frequência máxima: {valor_k}\nFrequência associada: {m_qtd}")
+    else:
+        return("Existe mais de 1 valor com a mesma frequência")
 
 
 def main():
