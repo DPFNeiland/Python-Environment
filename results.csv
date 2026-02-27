@@ -1,0 +1,4 @@
+CPU Model,Cores,Threads,RAM(GB),CPU Score,CPU Std,Memory Score,Memory Std,Disk Score,Disk Std,Final Score
+"Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",4,8,7.88,8.75,1.06,1342.43,361.57,256.19,29.97,20.04
+"Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",4,8,7.88,9.42,0.42,1927.77,338.09,236.14,19.04,23.0
+"Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",4,8,7.88,10.17,0.12,1914.25,200.35,306.63,10.76,25.86
