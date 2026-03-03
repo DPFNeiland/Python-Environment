@@ -1,5 +1,0 @@
-10x10
-4 submarinos 2x1
-3 contratorpedeiros 3x1
-2 navios-tanque 4x1
-1 porta-avião 5x1
