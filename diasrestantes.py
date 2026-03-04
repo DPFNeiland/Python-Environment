@@ -4,7 +4,7 @@ from datetime import datetime
 agora = datetime.now()
 
 # Data do Natal (24/12/2025 às 18h00)
-prazo = datetime(2025, 12, 24, 18, 0, 0)
+prazo = datetime(2026   , 12, 24, 18, 0, 0)
 
 # Diferença
 delta = prazo - agora
