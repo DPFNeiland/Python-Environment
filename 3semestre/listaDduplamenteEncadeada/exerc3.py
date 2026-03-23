@@ -7,8 +7,8 @@ class No:
 
 class Lista:
     def __init__(self):
-        self.inicio = None
-        self.fim = None
+        self.inicio: No = None
+        self.fim: No = None
         self.tamanho = 0
 
 
@@ -56,7 +56,7 @@ class Lista:
         return None     
     
     def remover(self, dado):
-        aux = self.pesquisar(dado)
+        aux: No = self.pesquisar(dado)
 
         if aux is not None:
             if self.tamanho == 1: # a lista tem apensa um valor
