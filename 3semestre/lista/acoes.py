@@ -41,7 +41,7 @@ def vender_acoes_Selmini(transacao) -> float:
         if tipo == 'C':
             qtd = t[1]
             valor = t[2]
-            fila.append((qtd, valor))
+            fila.append([qtd, valor])
         
         elif tipo == 'V':
             qtd_venda = t[1]
@@ -63,10 +63,10 @@ def vender_acoes_Selmini(transacao) -> float:
 
 
 def main2():
-    transacao = [('C', 100, 20),
-                 ('C', 20, 24),
-                 ('C', 200, 36),
-                 ('V', 150, 30)]
+    transacao = [['C', 100, 20],
+                 ['C', 20, 24],
+                 ['C', 200, 36],
+                 ['V', 150, 30]]
     
     montante = vender_acoes_Selmini(transacao)
     print(f'Montante R$ {montante:.2f}')
